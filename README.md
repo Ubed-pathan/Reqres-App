@@ -1,54 +1,75 @@
-# React + TypeScript + Vite
+# Reqres App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React + TypeScript + Vite project with modern UI components and API handling.
 
-Currently, two official plugins are available:
+## 🚀 Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Prerequisites
+- Node.js (Latest LTS recommended)
+- npm or yarn installed
 
-## Expanding the ESLint configuration
+### 📦 Installation
+```sh
+git clone https://github.com/your-username/reqres-app.git
+cd reqres-app
+npm install
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+🛠️ Running the Project
+npm run dev
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+🔧 Building for Production
+npm run build
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+🚨 Linting
+npm run lint
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+🏗️ Tech Stack
+🔹React: Component-based UI library
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+🔹TypeScript: Strongly typed JavaScript
+
+🔹Vite: Fast development server and bundler
+
+🔹React Router: Client-side routing
+
+🔹Axios: HTTP client for API requests
+
+🔹Tailwind CSS: Utility-first styling
+
+React Icons & Lucide React: Beautiful and customizable icons
+
+📌 Icon Libraries
+🔹 React Icons
+
+React Icons provides a collection of popular icons from various libraries.
+
+Example Usage:
+
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
+
+<AiOutlineLoading3Quarters size={25} className="animate-spin" />;
+
+
+🔹 Lucide React
+Lucide React offers open-source, consistent, and customizable icons.
+
+Example Usage:
+import { Pencil, Trash } from "lucide-react";
+
+<Pencil size={16} />;
+<Trash size={16} />;
+
+🌟 Features
+✅ User authentication using local storage
+✅ Protected routes for authorized users
+✅ API requests using Axios
+✅ Toast notifications with react-toastify
+
+🔥 Assumptions & Considerations
+🔹The app requires a .env file with VITE_SERVER_API defined.
+
+🔹Uses react-router-dom for routing.
+
+🔹react-toastify is used for notifications.
+
+🔹TailwindCSS is used for styling.
