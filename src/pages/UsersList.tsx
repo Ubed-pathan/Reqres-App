@@ -50,7 +50,7 @@ const UserList = () => {
           autoClose: 1000,
           theme: "dark",
         });
-        setUsers((prevUsers) => prevUsers.filter((user) => user.id !== userId));
+        setUsers((prevUsers) => prevUsers.filter((user) => user.id !== Number(userId)));
       } else {
         toast.error("❌ Deletion failed!", {
           position: "top-center",
@@ -86,13 +86,13 @@ const UserList = () => {
             {users.length === 0 && (
               <p className="text-text-200">No users found.</p>
             )}
-            
+
             {users.map((user) => (
               <UserCard
                 key={user.id}
                 user={user}
                 onEdit={() => setSelectedUser(user)}
-                onDelete={() => handleDelete(user.id)}
+                onDelete={() => handleDelete(user.id.toString())}
                 isLoading={loadingForDelete[user.id] || false}
               />
             ))}
@@ -133,8 +133,6 @@ const UserList = () => {
         autoClose={5000}
         hideProgressBar={false}
         newestOnTop={false}
-        closeOn
-        Click={false}
         rtl={false}
         pauseOnFocusLoss
         draggable
